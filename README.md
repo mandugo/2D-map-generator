@@ -133,4 +133,25 @@ Internal helper that uses BFS to check if the top-left cell `(0,0)` can reach th
 
 ---
 
-##
+## Example
+```
+# Clone the repo and install dependencies (matplotlib, numpy)
+git clone https://github.com/mandugo/2D-map-generator.git
+cd 2D-map-generator
+pip install matplotlib numpy
+
+# Run the main script
+python map_generator.py
+```
+Sample Output:
+1. A Random Map (`obstacle_prob=0.3`)
+2. A City-Block Map with `block_size=3` and `obstacle_fill=0.6`
+3. A Maze with loops (`extra_paths_prob=0.1`)
+
+Each map will pop up in a Matplotlib window, and the script will also print obstacle coordinates for the random map in the console.
+
+---
+
+## License
+This project is licensed under the MIT License – see the LICENSE file for details.
+Feel free to use and modify this code in your own projects. Contributions and improvements are welcome!
