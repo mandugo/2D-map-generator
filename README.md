@@ -44,10 +44,14 @@ One key feature is that all generated maps **guarantee at least one valid path**
 ## Usage
 
 Install Dependencies:
-`pip install matplotlib numpy`
+```
+pip install matplotlib numpy
+```
 
 Run the main script:
-`python map_generator.py`
+```
+python map_generator.py
+```
 
 Depending on how you set your parameters, you can generate and visualize:
 - A random map.
@@ -66,17 +70,34 @@ Below are the main parameters you can tweak when calling `generate_map`:
 - `map_type='random'`
 - `obstacle_prob (float)` – Probability of placing an obstacle in a free cell.
 
-Example: `my_random_map = generate_map(N=15, map_type='random', obstacle_prob=0.2)`
+Example: 
+```
+my_random_map = generate_map(N=15, map_type='random', obstacle_prob=0.2)
+```
 
 ### City-Block Map
 - `map_type='city'`
 - `block_size (int)` – The size of each “building block.”
 - `obstacle_fill (float)` – Within a block, the probability that a given cell is an obstacle.
 
-Example: `my_city_map = generate_map(N=15, map_type='city', block_size=3, obstacle_fill=0.7)`
+Example: 
+```
+my_city_map = generate_map(N=15, map_type='city', block_size=3, obstacle_fill=0.7)
+```
 
 ### Maze with Loops
 - `map_type='maze'`
 - `extra_paths_prob (float)` – After building a “perfect” maze (exactly one path), the script randomly removes additional walls with this probability. This adds loops and multiple routes.
 
-Example: `my_maze = generate_map(N=15, map_type='maze', extra_paths_prob=0.1)`
+Example: 
+```
+my_maze = generate_map(N=15, map_type='maze', extra_paths_prob=0.1)
+```
+
+---
+
+## Functions Overview
+```
+generate_map(N, map_type='random', obstacle_prob=0.2, block_size=3,
+            obstacle_fill=0.7, extra_paths_prob=0.05, max_tries=100)
+```
